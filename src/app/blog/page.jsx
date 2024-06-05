@@ -16,6 +16,7 @@ export default async function Blog() {
 			{posts.map(post => {
 				return (
 					<Card
+						key={post.id}
 						author={post.author}
 						date={post.date}
 						description={post.description}
