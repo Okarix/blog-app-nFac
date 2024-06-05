@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 async function fetchPost(id) {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`);
+	const res = await fetch('https://4bb6e8e76207d252.mokky.dev/posts');
 	if (!res.ok) {
 		throw new Error('Failed to fetch posts');
 	}
@@ -22,6 +22,9 @@ export default async function Post({ params }) {
 
 	return (
 		<>
+			<Head>
+				<title>{post.title}</title>
+			</Head>
 			<section class='text-gray-400  body-font'>
 				<Link
 					href='/blog'
