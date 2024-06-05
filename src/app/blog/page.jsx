@@ -1,7 +1,7 @@
 import Card from '../components/ui/card';
 
 async function fetchPosts() {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`);
+	const res = await fetch('https://4bb6e8e76207d252.mokky.dev/posts');
 	if (!res.ok) {
 		throw new Error('Failed to fetch posts');
 	}
